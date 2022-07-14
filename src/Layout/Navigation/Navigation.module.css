@@ -1,0 +1,15 @@
+.nav{
+    background-color: #dbba90;
+    color: #fffefd;
+    display: flex;
+    justify-content: space-between;
+}
+.nav h4{
+    margin: 0;
+    padding: 0.5em;
+}
+.items{
+    padding: 0.5em;
+    display: flex;
+    margin-right: 5%;
+}

@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react';
+import Layout from './Layout/Layout';
+import DairyDataContext from './store/DairyData-context';
+const MONTH = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 function App() {
+  const [data,setData]=useState('Hello')
+  const onchangeHandler=(e)=>{
+    setData(e.target.value);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DairyDataContext.Provider
+      value={
+        {
+          text_data: data,
+          typed:onchangeHandler,
+          date:MONTH[new Date().getMonth()]
+        }
+      }
+    >
+      <div className="App">
+        <Layout />
+      </div>
+    </DairyDataContext.Provider>
   );
 }
 

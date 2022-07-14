@@ -1,0 +1,9 @@
+.note_area{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and  (max-width:768px) {
+    .note_area{
+        flex-direction: column;
+    }
+}

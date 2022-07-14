@@ -1,0 +1,19 @@
+.note{
+    margin: 1em 1rem;
+    background-color: rgb(246 213 173 / 24%);
+    border-radius: 6px;
+    box-shadow: 2px 3px 13px 0px #0000005c;
+    padding: 1em;
+}
+.textFeild{
+    width: 87%;
+    height: 10em;
+    resize: none;
+    border: none;
+    box-shadow: 2px 3px 13px 0px #c7bebe5c;
+    padding: 1em;
+    border-radius: 6px;
+}
+.note p{
+    text-overflow:inherit;
+}
